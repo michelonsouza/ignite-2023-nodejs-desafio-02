@@ -1,4 +1,4 @@
-# Ignite Node.JS - 2023
+# Ignite Node.JS - 2023 - Desafio 02
 
 [![Node.JS](https://skills.thijs.gg/icons?i=nodejs)](https://skills.thijs.gg)
 
@@ -7,13 +7,13 @@
 No terminal, na pasta raiz do projeto, execute o comando:
 
 ```bash
-yarn
+npm install
 ```
 
 Após a instalção das depêndencias, execute esse comando para iniciar o [husky](https://typicode.github.io/husky/):
 
 ```bash
-yarn prepare
+npm run prepare
 ```
 
 ### .env
@@ -26,7 +26,7 @@ Altere conforme sua preferência
 Após a configuração do seu arquivo `.env`, execute o comando:
 
 ```bash
-yarn knex migrate:latest
+npm run knex migrate:latest
 ```
 
 Isso ira popular o banco de dados `sqlite` (quando em ambiente de `testes` e `local`) com as tabelas base
@@ -36,7 +36,7 @@ Isso ira popular o banco de dados `sqlite` (quando em ambiente de `testes` e `lo
 Basta executar o comando:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 ### Tests
