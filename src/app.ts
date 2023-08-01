@@ -2,7 +2,7 @@ import fastify from 'fastify';
 import cookie from '@fastify/cookie';
 
 import { env } from './env';
-// import { transactionsRoutes } from './routes';
+import { usersRoutes, snacksRoutes } from './routes';
 
 const logger = !!JSON.parse(env.LOGGER);
 
@@ -12,6 +12,10 @@ export const app = fastify({
 
 app.register(cookie);
 
-// app.register(transactionsRoutes, {
-//   prefix: 'transactions',
-// });
+app.register(usersRoutes, {
+  prefix: 'users',
+});
+
+app.register(snacksRoutes, {
+  prefix: 'snacks',
+});
