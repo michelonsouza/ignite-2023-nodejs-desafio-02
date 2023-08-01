@@ -19,6 +19,12 @@
   "rules": {
     "camelcase": "off",
     "no-console": ["warn", { "allow": ["error", "info", "clear"] }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
