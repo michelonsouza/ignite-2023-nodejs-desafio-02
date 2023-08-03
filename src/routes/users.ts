@@ -50,4 +50,31 @@ export async function usersRoutes(app: FastifyInstance) {
 
     return reply.status(201).send();
   });
+
+  app.get(
+    '/session-revalidate',
+    {
+      preHandler: [checkSessionIdExists],
+    },
+    async (request, reply) => {
+      const getUsersHeadersSchema = z.object({
+        'user-id': z.string().uuid(),
+      });
+
+      const { 'user-id': userId } = getUsersHeadersSchema.parse(
+        request.headers,
+      );
+
+      const session_id = randomUUID();
+
+      reply.cookie('sessionId', session_id, {
+        path: '/',
+        maxAge: 1000 * 60 * 60 * 24 * 7, // 7 days
+      });
+
+      await knex('users').update({ session_id }).where({ id: userId });
+
+      reply.status(204).send();
+    },
+  );
 }
