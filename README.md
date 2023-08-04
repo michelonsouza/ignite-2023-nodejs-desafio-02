@@ -74,3 +74,4 @@ Estão disponíveis os comandos:
   - Quantidade total de refeições fora da dieta
   - Melhor sequência de refeições dentro da dieta
 - [x] O usuário só pode visualizar, editar e apagar as refeições o qual ele criou
+- [x] Criação de `testes e2e` para as rotas de `users` e `snacks`
