@@ -46,6 +46,9 @@ npm run dev
 
 ### Tests
 
+Antes de iniciar os testes copie o arquivo `.env.test.example` para `.env.test`
+Altere conforme sua preferência (sendo diferente do arquivo `.env`)
+
 A aplicação utiliza o [vitest](https://vitest.dev/) para a execução dos testes
 
 Estão disponíveis os comandos:
