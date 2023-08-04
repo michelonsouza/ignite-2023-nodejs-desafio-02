@@ -2,6 +2,8 @@
 
 [![Node.JS](https://skills.thijs.gg/icons?i=nodejs)](https://skills.thijs.gg)
 
+[TOC]
+
 ## Specs do desafio
 
 [Notion](https://efficient-sloth-d85.notion.site/Desafio-02-be7cdb37aaf74ba898bc6336427fa410) do `Desafio 02`
