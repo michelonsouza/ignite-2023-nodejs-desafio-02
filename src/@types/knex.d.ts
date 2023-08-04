@@ -13,6 +13,8 @@ declare module 'knex/types/tables' {
   interface Snack {
     id: string;
     name: string;
+    time: string;
+    date: string;
     user_id: string;
     description: string;
     is_on_the_diet: boolean;
