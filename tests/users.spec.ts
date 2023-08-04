@@ -13,7 +13,7 @@ import { fakerPT_BR as faker } from '@faker-js/faker';
 
 import { app } from '../src/app';
 
-describe('[USERS] routes', async () => {
+describe('🫡 [USERS] routes', async () => {
   beforeAll(async () => {
     await app.ready();
   });

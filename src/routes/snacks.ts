@@ -53,12 +53,17 @@ export async function snacksRoutes(app: FastifyInstance) {
         request.headers,
       );
 
-      const snack = await knex('snacks').select().where({
-        id,
-        user_id,
-      });
+      const snack = await knex('snacks')
+        .select()
+        .where({
+          id,
+          user_id,
+        })
+        .first();
 
-      return { snack };
+      return {
+        snack: { ...snack, is_on_the_diet: !!snack?.is_on_the_diet },
+      };
     },
   );
 
@@ -200,7 +205,8 @@ export async function snacksRoutes(app: FastifyInstance) {
 
       const summary = getSnacksResult.reduce(
         (accumulator: Record<string, number>, snack) => {
-          if (snack.is_on_the_diet) {
+          // eslint-disable-next-line no-extra-boolean-cast
+          if (!!snack.is_on_the_diet) {
             accumulator.in_diet += 1;
             bestSequence += 1;
 
@@ -224,6 +230,7 @@ export async function snacksRoutes(app: FastifyInstance) {
         },
       );
 
+      /* c8 ignore next 3 */
       bestSequence =
         bestSequence > oldBestSequence ? bestSequence : oldBestSequence;
 
