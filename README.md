@@ -2,7 +2,14 @@
 
 [![Node.JS](https://skills.thijs.gg/icons?i=nodejs)](https://skills.thijs.gg)
 
-[TOC]
+- [Ignite Node.JS - 2023 - Desafio 02](#ignite-nodejs---2023---desafio-02)
+  - [Specs do desafio](#specs-do-desafio)
+  - [Start 🏁](#start-)
+    - [.env](#env)
+    - [Migrations](#migrations)
+    - [Rodando o projeto](#rodando-o-projeto)
+    - [Tests](#tests)
+    - [Requisitos do `Desafio 02`](#requisitos-do-desafio-02)
 
 ## Specs do desafio
 
