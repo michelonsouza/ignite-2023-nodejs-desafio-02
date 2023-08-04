@@ -4,6 +4,7 @@ import { env } from './env';
 
 export const config: KnexInstance.Config = {
   client: env.DATABASE_CLIENT,
+  /* c8 ignore next 6 */
   connection:
     env.DATABASE_CLIENT === 'sqlite'
       ? {
